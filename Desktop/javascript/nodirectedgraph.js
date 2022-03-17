@@ -15,6 +15,15 @@ this.edges = {};
  this.edges[vertex2][vertex1] = weight;
  }
  
+ UndirectedGraph.prototype.removeEdge = function(vertex1, vertex2) {
+ 2 if (this.edges[vertex1] && this.edges[vertex1][vertex2] != undefined) {
+ 3 delete this.edges[vertex1][vertex2];
+ 4 }
+ 5 if (this.edges[vertex2] && this.edges[vertex2][vertex1] != undefined) {
+ 6 delete this.edges[vertex2][vertex1];
+ 7 }
+ 8 }
+ 
 var graph1 = new UndirectedGraph();
 graph1.addVertex(1);
 graph1.addVertex(2);
