@@ -43,3 +43,19 @@ graph1.edges; // 1: {2: 0}, 2: {1: 0}
  graph1.addEdge(4,5, 100);
  graph1.addEdge(1,5, 88);
  console.log(graph1)
+
+var graph2 = new UndirectedGraph();
+  graph2.addVertex(1);
+  graph2.addVertex(2);
+  graph2.addEdge(1,2, 1);
+  graph2.edges; // 1: {2: 0}, 2: {1: 0}
+  graph2.addVertex(3);
+  graph2.addVertex(4);
+  graph2.addVertex(5);
+  graph2.addEdge(2,3, 8);
+ graph2.addEdge(3,4, 10);
+ graph2.addEdge(4,5, 100);
+ graph2.addEdge(1,5, 88);
+ graph2.removeVertex(5);
+ graph2.removeVertex(1);
+ graph2.removeEdge(2,3) 
